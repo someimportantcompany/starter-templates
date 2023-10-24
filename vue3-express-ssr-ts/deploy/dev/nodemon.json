@@ -1,0 +1,11 @@
+{
+  "ext": "js, ts, hbs, yml",
+  "execMap": {
+    "js": "node -r dotenv/config",
+    "ts": "ts-node -r dotenv/config"
+  },
+  "watch": [
+    "../../deploy",
+    "../../src"
+  ]
+}
