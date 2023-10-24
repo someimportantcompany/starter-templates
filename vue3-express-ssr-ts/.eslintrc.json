@@ -64,7 +64,7 @@
       }
     },
     {
-      "files": ["test/**", "**/*.test.ts"],
+      "files": ["test/**", "**/*.test.ts", "**/test/**"],
       "env": { "mocha": true },
       "plugins": ["mocha"],
       "rules": {
