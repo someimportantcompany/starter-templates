@@ -4,7 +4,6 @@ COPY ./package*.json ./
 
 COPY ./src/backend/package*.json ./src/backend/
 COPY ./src/frontend/package*.json ./src/frontend/
-COPY ./deploy/dev/package*.json ./deploy/dev/
 COPY ./deploy/server/package*.json ./deploy/server/
 COPY ./deploy/aws-lambda/package*.json ./deploy/aws-lambda/
 

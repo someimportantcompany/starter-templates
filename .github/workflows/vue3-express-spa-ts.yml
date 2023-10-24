@@ -25,9 +25,12 @@ jobs:
           cache: npm
           cache-dependency-path: |
             ./vue3-express-spa-ts/package-lock.json
-            ./vue3-express-spa-ts/*/*/package-lock.json
+            ./vue3-express-spa-ts/src/*/package-lock.json
+            ./vue3-express-spa-ts/deploy/*/package-lock.json
       - run: npm ci
+      - run: npm run test:src
       - run: npm run build
+      - run: npm run test:deploy
 
   build:
     runs-on: ubuntu-latest
