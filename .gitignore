@@ -1,0 +1,12 @@
+.envrc
+*.env
+*.DS_Store
+
+# Editor directories and files
+.vscode*
+.idea
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
