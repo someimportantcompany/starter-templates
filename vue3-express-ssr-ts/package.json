@@ -9,8 +9,8 @@
     "lint": "eslint . --ext .js,.ts",
     "postinstall": "./install.sh",
     "start": "npm --prefix ./deploy/server start",
-    "test:src": "mocha './src/*/{,!(node_modules)/**}/*.test.{,+(js|ts)}'",
-    "test:deploy": "mocha './deploy/*/{,!(node_modules)/**}/*.test.{,+(js|ts)}'"
+    "test:src": "NODE_ENV=testing mocha './src/*/{,!(node_modules)/**}/*.test.{,+(js|ts)}'",
+    "test:deploy": "NODE_ENV=testing mocha './deploy/*/{,!(node_modules)/**}/*.test.{,+(js|ts)}'"
   },
   "repository": "https://github.com/someimportantcompany/starter-templates",
   "bugs": "https://github.com/someimportantcompany/starter-templates/issues",
@@ -39,8 +39,8 @@
     "typescript": "^5.2.2"
   },
   "engines": {
-    "node": "16.x",
-    "npm": "8.x"
+    "node": ">=16.x",
+    "npm": ">=8.x"
   },
   "mocha": {
     "exit": true,

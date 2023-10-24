@@ -60,7 +60,9 @@ const serializers = {
 
 const logger = bunyan.createLogger({
   name: process.env.LOG_NAME || 'vue3-express-spa-ts',
-  level: process.env.LOG_LEVEL as LogLevel || (process.env.NODE_ENV === 'production' ? 'info' : 'debug'),
+  level: process.env.LOG_LEVEL as LogLevel
+    ?? (process.env.NODE_ENV === 'testing' ? 61 : undefined)
+    ?? (process.env.NODE_ENV === 'production' ? 'info' : 'debug'),
   serializers,
 });
 

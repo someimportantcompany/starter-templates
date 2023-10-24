@@ -64,10 +64,11 @@
       }
     },
     {
-      "files": ["test/**", "**/*.test.ts", "**/test/**"],
+      "files": ["test/**",  "**/*.test.js", "**/*.test.ts", "**/test/**"],
       "env": { "mocha": true },
       "plugins": ["mocha"],
       "rules": {
+        "global-require": "off",
         "padded-blocks": "off",
         "prefer-arrow-callback": "off",
         "func-names": "off",
