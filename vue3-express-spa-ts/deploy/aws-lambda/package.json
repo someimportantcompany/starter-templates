@@ -1,0 +1,12 @@
+{
+  "name": "deploy-aws-lambda",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "deploy": "cdk deploy --context stackName=vue3-express-spa-ts",
+    "synth": "cdk synth --context stackName=vue3-express-spa-ts"
+  },
+  "dependencies": {
+    "serverless-http": "^3.2.0"
+  }
+}

@@ -1,0 +1,12 @@
+deploy/dev/
+node_modules/
+**/node_modules/
+.envrc
+*.env
+Dockerfile
+
+src/backend/dist/
+src/frontend/dist/
+src/frontend/dist-ssr/
+deploy/server/dist/
+deploy/aws-lambda/cdk.out/
