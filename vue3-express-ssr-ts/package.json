@@ -9,7 +9,8 @@
     "lint": "eslint . --ext .js,.ts",
     "postinstall": "./install.sh",
     "start": "npm --prefix ./deploy/server start",
-    "test": "mocha"
+    "test:src": "mocha './src/*/{,!(node_modules)/**}/*.test.{,+(js|ts)}'",
+    "test:deploy": "mocha './deploy/*/{,!(node_modules)/**}/*.test.{,+(js|ts)}'"
   },
   "repository": "https://github.com/someimportantcompany/starter-templates",
   "bugs": "https://github.com/someimportantcompany/starter-templates/issues",
@@ -47,13 +48,6 @@
     "require": [
       "ts-node/register"
     ],
-    "reporter": "spec",
-    "ignore": [
-      "**/node_modules"
-    ],
-    "spec": [
-      "./src/*/{,!(node_modules)/**}/*.test.{,+(js|ts)}",
-      "./deploy/*/{,!(node_modules)/**}/*.test.{,+(js|ts)}"
-    ]
+    "reporter": "spec"
   }
 }
