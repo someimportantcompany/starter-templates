@@ -23,6 +23,9 @@ jobs:
         with:
           node-version: 18.x
           cache: npm
+          cache-dependency-path: |
+            ./vue3-express-ssr-ts/package-lock.json
+            ./vue3-express-ssr-ts/*/*/package-lock.json
       - run: npm ci
       - run: npm run build
 
