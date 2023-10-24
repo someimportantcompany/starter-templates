@@ -39,6 +39,7 @@ import * as cdk from 'aws-cdk-lib';
         'aws-lambda/cdk.out/**',
         'aws-lambda/cdk.out/.cache/*',
         '!aws-lambda/*.js*',
+        'aws-lambda/*.test.js',
         '!server/**',
       ],
     }),

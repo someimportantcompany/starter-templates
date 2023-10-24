@@ -9,7 +9,7 @@
     "lint": "eslint . --ext .js,.ts",
     "postinstall": "./install.sh",
     "start": "npm --prefix ./deploy/server start",
-    "test:src": "NODE_ENV=testing mocha './src/*/{,!(node_modules)/**}/*.test.{,+(js|ts)}'",
+    "test:src": "NODE_ENV=testing mocha './src/backend/{,!(node_modules)/**}/*.test.{,+(js|ts)}'",
     "test:deploy": "NODE_ENV=testing mocha './deploy/*/{,!(node_modules)/**}/*.test.{,+(js|ts)'}"
   },
   "repository": "https://github.com/someimportantcompany/starter-templates",
