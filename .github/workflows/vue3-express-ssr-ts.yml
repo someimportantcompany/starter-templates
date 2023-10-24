@@ -1,0 +1,38 @@
+name: vue3-express-ssr-ts
+on:
+  # On push to the vue3-express-ssr-ts folder
+  push:
+    paths:
+      - ./.github/workflows/vue3-express-ssr-ts.yml
+      - ./vue3-express-ssr-ts/**
+  # Or whenever run by hand
+  workflow_dispatch:
+
+defaults:
+  run:
+    shell: bash
+    working-directory: ./vue3-express-ssr-ts
+
+jobs:
+
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 18.x
+          cache: npm
+      - run: npm ci
+      - run: npm run build
+
+  build:
+    runs-on: ubuntu-latest
+    needs: test
+    steps:
+      - uses: actions/checkout@v3
+      # - uses: docker/login-action@v2
+      #   with:
+      #     username: ${{ secrets.DOCKERHUB_USER }}
+      #     password: ${{ secrets.DOCKERHUB_TOKEN }}
+      - run: docker build -t vue3-express-ssr-ts:test .
